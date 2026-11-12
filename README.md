@@ -12,7 +12,7 @@ real toy.
 |---|---|
 | Demo: real vs **photoreal** sim (MPM + Gaussian splat), side by side | [`media/demo_photoreal_vs_real.mp4`](media/demo_photoreal_vs_real.mp4) |
 | Demo: real vs **particle** sim, side by side | [`media/demo_particles_vs_real.mp4`](media/demo_particles_vs_real.mp4) |
-| Input video (the clip everything is fitted to, re-encoded 30 fps, no audio) | [`media/input_stepped_presses.mp4`](media/input_stepped_presses.mp4) |
+| Input video (the clip everything is fitted to, stabilized onto the table, 30 fps, no audio) | [`media/input_stepped_presses_stabilized.mp4`](media/input_stepped_presses_stabilized.mp4) |
 | Orbit of the reconstructed bee (Gaussian splat) | [`media/splat_orbit.mp4`](media/splat_orbit.mp4) |
 | Fit result figure | [`media/fit3d_dense.png`](media/fit3d_dense.png) |
 
@@ -164,22 +164,24 @@ orbit videos ──► COLMAP + 3D Gaussian Splatting ──► splat aligned to
 
 ## Reproduce
 
-Data: the raw 60 fps clip (`presses/5 second long presses.mp4`, 499 MB) and the five orbit clips (`orbit/`, 161 MB) are
-too large for git. Place them at those paths to re-run from scratch. `media/input_stepped_presses.mp4` is a 30 fps
-viewing copy; the reader is tuned on the 60 fps original. All intermediate data needed for the fits is committed
-(`out/frames.csv`, `out/series.csv`, `out/lcd_gain.npy`, `splat/bee_sim.npz`), so steps 5 onward run without the video.
+Data: the input video in the repo, `media/input_stepped_presses_stabilized.mp4`, is the full clip after stabilization
+(`src/export_stabilized.py`), compressed to 30 fps. The original handheld 60 fps recording (499 MB) is not included. It is
+too large for git, and nothing downstream needs it: every per-frame measurement taken from it is committed
+(`out/frames.csv`, `out/series.csv`, `out/lcd_gain.npy`), as is the aligned splat (`splat/bee_sim.npz`). So everything
+from the 1-D fits onward runs without any video. The orbit clips (161 MB) are omitted for the same reason. The two
+video-reading steps below expect the original at `presses/5 second long presses.mp4`.
 
 ```bash
 pip install -r requirements.txt       # plus ffmpeg on PATH; an NVIDIA GPU for Taichi (CPU works, much slower)
 ```
 
 ```bash
-python src/stabilize_all.py           # video -> out/frames.csv, cache/lcd.npy   (needs the raw clip)
+python src/stabilize_all.py           # video -> out/frames.csv, cache/lcd.npy   (needs the original clip)
 python src/build_series.py            # -> out/series.csv (per-frame force + strain)
 python src/fit_dense.py               # 1-D models, leave-cycles-out
 python src/fit_mpm_dense.py           # 3-D MPM fit (~1 h on an RTX 4060 laptop GPU) -> out/fit3d_dense_best.json
 python src/plot_fit3d.py              # -> out/fit3d_dense.png
-python src/render_compare.py          # particle side-by-side -> out/compare.mp4 (needs the raw clip)
+python src/render_compare.py          # particle side-by-side -> out/compare.mp4 (needs the original clip)
 ```
 
 Photoreal stage (Google Colab, GPU), run from WSL with the [Colab CLI](https://pypi.org/project/google-colab-cli/):
@@ -195,7 +197,7 @@ python src/render_compare.py --photoreal splat/photoreal_sim.mp4    # -> out/com
 
 | path | contents |
 |---|---|
-| `src/` | **Main pipeline:** `stabilize*`, `strain_stab`, `lcd_read`, `build_series`, `fit_dense`, `mpm_bee`, `fit_mpm_dense`, `plot_fit3d`, `render_compare`, `splat_align`. **Checks:** `track_face`, `face_sim`, `screen_shape`, `check_wings`, `render_sim`. **Earlier exploration** on the first short press clips, superseded by the above: `track_height`, `press_events`, `crops_big`, `fit_lumped`, `fit_nl`, `fit_steps`, `fit_mpm`, `report_mpm`. |
+| `src/` | **Main pipeline:** `stabilize*`, `export_stabilized`, `strain_stab`, `lcd_read`, `build_series`, `fit_dense`, `mpm_bee`, `fit_mpm_dense`, `plot_fit3d`, `render_compare`, `splat_align`. **Checks:** `track_face`, `face_sim`, `screen_shape`, `check_wings`, `render_sim`. **Earlier exploration** on the first short press clips, superseded by the above: `track_height`, `press_events`, `crops_big`, `fit_lumped`, `fit_nl`, `fit_steps`, `fit_mpm`, `report_mpm`. |
 | `colab/` | GPU stages on Colab: splat training (`stageA_*`), PhysGaussian render (`stageB_*`), CLI helper scripts |
 | `out/` | Per-frame data, fit results (`fit3d_dense_best.json`, grids, logs), check figures. `*_tc200`, `*_nu0`, `*_sticky`, `*_floatingwings`, `*_rawstrain` are archived earlier variants. |
 | `splat/` | Aligned bee splat (`bee_sim.npz`), training cameras, renders. The full `splat.ply` (45 MB) is not committed. |
