@@ -9,3 +9,5 @@ splat/*.ply
 __pycache__/
 # one-off Colab debugging probes
 colab/_*.py
+# small copies for GitHub inline video upload (not committed)
+for_upload/
