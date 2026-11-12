@@ -210,7 +210,7 @@ python src/render_compare.py --photoreal splat/photoreal_sim.mp4    # -> out/com
 | `splat/` | Aligned bee splat (`bee_sim.npz`), training cameras, renders. The full `splat.ply` (45 MB) is not committed. |
 | `media/` | Deliverable videos and figures |
 
-## Credits
+## References
 
 - **MLS-MPM:** Y. Hu et al., *A Moving Least Squares Material Point Method*, SIGGRAPH 2018. Implemented here in
   [Taichi](https://github.com/taichi-dev/taichi).
