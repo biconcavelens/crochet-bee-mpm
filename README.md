@@ -22,6 +22,13 @@ and the held-out cycles are marked (pink, "HELD OUT - prediction").
 
 ---
 
+
+https://github.com/user-attachments/assets/9560b932-e8aa-4294-bc0d-807febc52664
+
+
+https://github.com/user-attachments/assets/4cfac36e-0d04-45b3-a83d-73ed47349c87
+
+
 ## Results
 
 **Fitted material** (3-D MPM, fixed-corotated hyperelastic with compaction hardening, ν = 0.2):
