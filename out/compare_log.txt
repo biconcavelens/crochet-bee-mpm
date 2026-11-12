@@ -1,0 +1,13 @@
+[Taichi] version 1.7.4, llvm 15.0.1, commit b4b956fd, win, python 3.11.15
+[Taichi] Starting on arch=cuda
+real crop x 310..910, y 215..735; 7.27 px/mm
+  t=19.9s
+  t=39.9s
+  t=59.9s
+  t=79.9s
+  t=99.9s
+  t=119.9s
+  t=139.9s
+  t=159.9s
+  t=179.9s
+done 2953 output frames

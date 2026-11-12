@@ -1,0 +1,14 @@
+[Taichi] version 1.7.4, llvm 15.0.1, commit b4b956fd, win, python 3.11.15
+[Taichi] Starting on arch=cuda
+hh=  0 e0=-0.16  E0=  16.7 kPa  train chi2/pt=  4.00  train med|err|=19.0%  held-out med|err|=16.3% rms=17.5%
+hh=  0 e0=-0.12  E0=  19.9 kPa  train chi2/pt=  3.72  train med|err|=17.6%  held-out med|err|=13.7% rms=16.1%
+hh=  0 e0=-0.08  E0=  23.9 kPa  train chi2/pt=  3.52  train med|err|=17.7%  held-out med|err|=12.6% rms=14.6%
+hh=  0 e0=-0.04  E0=  29.1 kPa  train chi2/pt=  3.38  train med|err|=17.4%  held-out med|err|=10.5% rms=13.2%
+hh=  3 e0=-0.16  E0=   9.4 kPa  train chi2/pt=  2.55  train med|err|=15.6%  held-out med|err|= 5.5% rms= 9.2%
+hh=  3 e0=-0.12  E0=  11.6 kPa  train chi2/pt=  2.54  train med|err|=15.2%  held-out med|err|= 4.6% rms= 9.1%
+hh=  3 e0=-0.08  E0=  14.5 kPa  train chi2/pt=  2.69  train med|err|=14.9%  held-out med|err|= 7.6% rms= 9.7%
+hh=  3 e0=-0.04  E0=  18.3 kPa  train chi2/pt=  2.99  train med|err|=15.7%  held-out med|err|=12.3% rms=12.0%
+hh=  6 e0=-0.16  E0=   6.6 kPa  train chi2/pt=  2.50  train med|err|=15.0%  held-out med|err|= 4.4% rms= 8.5%
+hh=  6 e0=-0.12  E0=   8.3 kPa  train chi2/pt=  2.55  train med|err|=14.7%  held-out med|err|= 8.5% rms= 9.6%
+hh=  6 e0=-0.08  E0=  10.5 kPa  train chi2/pt=  2.77  train med|err|=15.7%  held-out med|err|=10.0% rms=11.7%
+hh=  6 e0=-0.04  E0=  13.5 kPa  train chi2/pt=  3.13  train med|err|=17.8%  held-out med|err|=12.3% rms=14.5%

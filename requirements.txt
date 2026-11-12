@@ -1,0 +1,7 @@
+# local pipeline (tested: Python 3.11, Windows 11, RTX 4060 Laptop GPU). ffmpeg must be on PATH for the video renders.
+numpy>=1.26
+scipy>=1.11
+opencv-python>=4.8
+matplotlib>=3.8
+taichi==1.7.4
+# Colab (photoreal stage) uses its own env, see colab/stageA_setup.py and colab/stageB_setup.py

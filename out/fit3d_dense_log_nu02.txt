@@ -1,0 +1,15 @@
+[Taichi] version 1.7.4, llvm 15.0.1, commit b4b956fd, win, python 3.11.15
+[Taichi] Starting on arch=cuda
+hh=  3 e0=-0.08 E0~ 10.4 kPa  train chi2= 25.45 med 18.6% | held-out med 13.7% rms 16.3%
+hh=  3 e0=-0.04 E0~ 13.0 kPa  train chi2= 23.68 med 18.1% | held-out med 12.8% rms 14.8%
+hh=  3 e0=+0.00 E0~ 16.4 kPa  train chi2= 23.13 med 17.7% | held-out med 12.4% rms 13.9%
+hh=  3 e0=+0.04 E0~ 20.8 kPa  train chi2= 24.17 med 18.0% | held-out med 14.7% rms 15.3%
+hh=  6 e0=-0.08 E0~  7.4 kPa  train chi2= 23.28 med 18.3% | held-out med 12.5% rms 14.6%
+hh=  6 e0=-0.04 E0~  9.3 kPa  train chi2= 22.28 med 17.9% | held-out med 12.6% rms 13.9%
+hh=  6 e0=+0.00 E0~ 12.0 kPa  train chi2= 21.64 med 17.5% | held-out med 13.7% rms 14.2%
+hh=  6 e0=+0.04 E0~ 15.5 kPa  train chi2= 22.71 med 17.1% | held-out med 16.1% rms 16.1%
+hh= 10 e0=-0.08 E0~  5.3 kPa  train chi2= 21.98 med 17.4% | held-out med 11.3% rms 13.8%
+hh= 10 e0=-0.04 E0~  6.8 kPa  train chi2= 21.65 med 17.4% | held-out med 12.4% rms 13.5%
+hh= 10 e0=+0.00 E0~  8.9 kPa  train chi2= 21.62 med 17.0% | held-out med 13.6% rms 14.6%
+hh= 10 e0=+0.04 E0~ 11.6 kPa  train chi2= 22.81 med 16.8% | held-out med 15.9% rms 17.4%
+BEST (re-run at fitted E0): {"hh": 10.0, "e0": 0.0, "E0_Pa": 8850.93171818976, "nu": 0.2, "lag_s": 0.21, "settle": {"weight_gf": 9.77697370030581, "sag_mm": 1.2586326599121094}, "held_out_cycles": [3, 7, 10], "train_med": 0.15066568152400367, "heldout_med": 0.12314617019469012, "heldout_rms": 0.13261350593939827, "heldout_max": 0.41229263678546757}

@@ -1,0 +1,9 @@
+[Taichi] version 1.7.4, llvm 15.0.1, commit b4b956fd, win, python 3.11.15
+[Taichi] Starting on arch=cuda
+hh=  6 e0=-0.04 E0~  8.5 kPa  train chi2= 22.80 med 18.3% | held-out med 12.2% rms 13.7%
+hh=  6 e0=+0.00 E0~ 10.8 kPa  train chi2= 21.99 med 17.9% | held-out med 13.0% rms 13.8%
+hh= 10 e0=-0.04 E0~  6.0 kPa  train chi2= 22.53 med 18.2% | held-out med 11.9% rms 13.4%
+hh= 10 e0=+0.00 E0~  7.8 kPa  train chi2= 22.12 med 17.4% | held-out med 13.0% rms 14.0%
+hh= 15 e0=-0.04 E0~  4.5 kPa  train chi2= 21.39 med 17.6% | held-out med 12.3% rms 13.6%
+hh= 15 e0=+0.00 E0~  5.8 kPa  train chi2= 22.29 med 17.2% | held-out med 12.8% rms 14.4%
+BEST (re-run at fitted E0): {"hh": 15.0, "e0": -0.04, "E0_Pa": 4459.406226913861, "nu": 0.0, "lag_s": 0.21, "settle": {"weight_gf": 8.95331131498471, "sag_mm": 1.4785842895507812}, "held_out_cycles": [3, 7, 10], "train_med": 0.12856882999473349, "heldout_med": 0.060728549655818045, "heldout_rms": 0.11633071248270427, "heldout_max": 0.5579487415007756}

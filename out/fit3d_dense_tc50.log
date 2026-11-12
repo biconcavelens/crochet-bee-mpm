@@ -1,0 +1,13 @@
+hh=  3 e0=-0.12 E0~  9.0 kPa  train chi2= 25.16 med 19.5% | held-out med 13.7% rms 16.3%
+hh=  3 e0=-0.08 E0~ 11.1 kPa  train chi2= 24.33 med 18.9% | held-out med 13.3% rms 15.2%
+hh=  3 e0=-0.04 E0~ 13.9 kPa  train chi2= 23.50 med 18.5% | held-out med 13.1% rms 14.2%
+hh=  3 e0=+0.00 E0~ 17.6 kPa  train chi2= 23.33 med 18.1% | held-out med 13.5% rms 14.0%
+hh=  6 e0=-0.12 E0~  6.2 kPa  train chi2= 22.88 med 17.1% | held-out med 11.9% rms 14.0%
+hh=  6 e0=-0.08 E0~  7.9 kPa  train chi2= 22.58 med 17.2% | held-out med 12.3% rms 13.5%
+hh=  6 e0=-0.04 E0~ 10.0 kPa  train chi2= 22.35 med 17.4% | held-out med 12.5% rms 13.6%
+hh=  6 e0=+0.00 E0~ 12.9 kPa  train chi2= 22.83 med 17.1% | held-out med 14.1% rms 14.7%
+hh= 10 e0=-0.12 E0~  4.5 kPa  train chi2= 22.14 med 17.2% | held-out med 11.7% rms 13.4%
+hh= 10 e0=-0.08 E0~  5.7 kPa  train chi2= 22.15 med 17.3% | held-out med 12.2% rms 13.5%
+hh= 10 e0=-0.04 E0~  7.3 kPa  train chi2= 22.33 med 17.0% | held-out med 13.0% rms 14.2%
+hh= 10 e0=+0.00 E0~  9.6 kPa  train chi2= 23.20 med 17.4% | held-out med 14.0% rms 16.2%
+BEST (re-run at fitted E0): {"hh": 10.0, "e0": -0.12, "E0_Pa": 4450.221506700879, "nu": 0.2, "lag_s": 0.21, "settle": {"weight_gf": 9.944329133537206, "sag_mm": 1.6059494018554688}, "held_out_cycles": [3, 7, 10], "train_med": 0.13841444582014217, "heldout_med": 0.054029789408857, "heldout_rms": 0.12019024501792114, "heldout_max": 0.59286292743447}

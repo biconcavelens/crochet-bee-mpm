@@ -1,0 +1,11 @@
+# raw footage (too large for git; see README "Data")
+presses/
+orbit/
+# regenerable caches / intermediates
+cache/
+out/_raw*.mp4
+out/*.mp4
+splat/*.ply
+__pycache__/
+# one-off Colab debugging probes
+colab/_*.py
