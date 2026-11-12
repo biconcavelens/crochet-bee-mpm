@@ -224,4 +224,3 @@ python src/render_compare.py --photoreal splat/photoreal_sim.mp4    # -> out/com
 - **Camera poses:** [COLMAP](https://colmap.github.io/) (J. Schönberger & J.-M. Frahm, CVPR 2016).
 - **Libraries:** OpenCV (SIFT, homographies), SciPy, NumPy, Matplotlib, ffmpeg.
 - **Compute:** Google Colab (L4 GPU) via the Colab CLI.
-- Built with the help of an AI coding assistant (Claude Code).
